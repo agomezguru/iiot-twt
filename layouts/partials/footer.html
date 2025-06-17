@@ -1,0 +1,48 @@
+<footer class="box-content  bg-ifm-blue text-white">
+  <div class="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
+    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+      ¿Listo para llevar su proyecto IIoT al siguiente nivel?
+    </h2>
+    <p class="mt-4 text-lg leading-8 text-blue-100">
+      Transformamos los datos de sus máquinas en rentabilidad. Nuestros
+        expertos estarán encantados de ayudarle a encontrar la implementación
+        perfecta para su planta industrial.
+    </p>
+    <div class="mt-10 flex items-center justify-center gap-x-6">
+        <a href="#" class="rounded-md bg-white px-6 py-3 text-base font-semibold text-ifm-blue shadow-sm transition hover:bg-gray-100">
+          Agendar
+        </a>
+        <a href="#" class="rounded-md border border-white px-6 py-3 text-base font-semibold text-white transition hover:bg-white hover:text-ifm-blue">
+          Más información
+        </a>
+    </div>
+  </div>
+  <div class="columns-1 gap-4 sm:columns-3 sm:gap-8 mb-8 ml-32">
+    <div>
+        <h6 class="font-bold tracking-tight text-white">{{ .Site.Title }}</h6>
+        <hr class="mb-4 mt-0 d-inline-block w-12" />
+        <p>
+            Transformamos los datos de sus máquinas en rentabilidad. Su socio
+              experto en la implementación de soluciones IIoT.
+        </p>
+    </div>
+    <div>
+        <h6 class="font-bold tracking-tight text-white text-uppercase">Contacto</h6>
+        <hr class="mb-4 mt-0 d-inline-block w-12" />
+        <p><i class="fas fa-home me-3"></i> Tu Dirección, Ciudad, País</p>
+        <p><i class="fas fa-envelope me-3"></i> contacto@tuempresa.com</p>
+        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+    </div>
+    <div>
+         <h6 class="font-bold tracking-tight text-white text-uppercase">Navegación</h6>
+         <hr class="mb-4 mt-0 d-inline-block w-12" />
+         <p><a href="#solucion" class="text-white">La Solución</a></p>
+         <p><a href="#aplicaciones" class="text-white">Aplicaciones</a></p>
+         <p><a href="#por-que-nosotros" class="text-white">¿Por qué Nosotros?</a></p>
+    </div>
+  </div>
+  <div class="text-center p-3 bg-ifm-orange">
+      © {{ now.Format "2006" }} Copyright:
+      <a class="text-white" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
+  </div>
+</footer>

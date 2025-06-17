@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<meta name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}
+    {{ printf "%s | %s" .Title site.Title }}{{ end }}
+</title>
+<meta name="description" content="
+  {{ with .Description }}{{ . }}{{ else }}{{ with .Summary }}{{ . }}
+  {{ else }}{{ .Site.Params.description }}{{end }}{{ end }} ">
+<link rel="canonical" href="{{ .Permalink }}" />
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{ template "_internal/opengraph.html" . }}
+{{ template "_internal/twitter_cards.html" . }}
+{{ if not (in (string .Site.BaseURL) "localhost") }}
+    {{ template "_internal/google_analytics_async.html" . }}
+{{ end }}	
+	<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+	{{ with .OutputFormats.Get "RSS" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
