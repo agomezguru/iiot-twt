@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'ifm-orange': '#FF8200',
-        'ifm-blue': '#00338D',
+        'cti-orange': '#FF8200',
+        'cti-blue': '#00338D',
       }
     },
   },
