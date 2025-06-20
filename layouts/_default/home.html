@@ -1,42 +1,42 @@
 {{ define "main" }}
 <!-- =========== SECCIÓN "BENEFICIOS CLAVE" =========== -->
 <section class="bg-gray-50 py-20 sm:py-28">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="mx-auto max-w-2xl text-center">
-            <div class="flex items-center justify-center rounded-full bg-ifm-orange/10 mb-6 px-3 py-1 w-fit">
-            <span class="text-ifm-orange uppercase">{{ .Site.Params.callout }}</span>              
-          </div>
-            
-            <h2 class="text-3xl font-bold tracking-tight text-gray-900
-              sm:text-4xl">{{ .Site.Params.calloutTitle | markdownify }}</h2>
-            <p class="mt-4 text-lg leading-8 text-gray-600">
-              {{ .Site.Params.calloutContent }}
-            </p>
-        </div>
+<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-2xl text-center">
+    <div class="flex items-center justify-center rounded-full bg-cti-orange/10
+      mb-6 px-3 py-1 w-fit">
+      <span class="text-cti-orange uppercase">{{ .Site.Params.callout }}</span>              
+    </div>            
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900
+      sm:text-4xl">{{ .Site.Params.calloutTitle | markdownify }}</h2>
+    <p class="mt-4 text-lg leading-8 text-gray-600">
+      {{ .Site.Params.calloutContent }}
+    </p>
+  </div>
         
-        <!-- Cuadrícula de Beneficios -->
-        {{ with .Site.Params.cards }}
-        <div class="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8
-        md:grid-cols-2 lg:grid-cols-3">
-          {{ range . }}
-          <!-- Tarjeta de Beneficio 1 -->
-          <div class="flex flex-col rounded-lg bg-white p-8 shadow-md transition
-            hover:-translate-y-1 hover:shadow-xl">
-            <!-- Icono (Heroicons) -->
-            <div class="flex h-12 w-12 items-center justify-center rounded-lg
-              bg-ifm-orange/10">
-              <svg class="h-7 w-7 text-ifm-orange" fill="none" stroke-width="1.5"
-                xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"
-                stroke="currentColor"><path stroke-linecap="round"
-                stroke-linejoin="round" d="{{ .icon }}" />
-              </svg>
-            </div>
-            <h3 class="mt-6 text-xl font-semibold text-gray-900">{{ .title }}</h3>
-            <p class="mt-2 text-base text-gray-600">{{ .content | markdownify }}</p>
-          </div>
-          {{ end }} 
-          </div>
-        {{ end }}
+  <!-- Cuadrícula de Beneficios -->
+  {{ with .Site.Params.cards }}
+  <div class="mx-auto mt-16 grid max-w-none grid-cols-1 gap-8 md:grid-cols-2
+    lg:grid-cols-3">
+    {{ range . }}
+    <!-- Tarjeta de Beneficio 1 -->
+    <div class="flex flex-col rounded-lg bg-white p-8 shadow-md transition
+      hover:-translate-y-1 hover:shadow-xl">
+      <!-- Icono (Heroicons) -->
+      <div class="flex h-12 w-12 items-center justify-center rounded-lg
+        bg-cti-orange/10">
+        <svg class="h-7 w-7 text-cti-orange" fill="none" stroke-width="1.5"
+          xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24"
+          stroke="currentColor"><path stroke-linecap="round"
+          stroke-linejoin="round" d="{{ .icon }}" />
+        </svg>
+      </div>
+      <h3 class="mt-6 text-xl font-semibold text-gray-900">{{ .title }}</h3>
+      <p class="mt-2 text-base text-gray-600">{{ .content | markdownify }}</p>
+    </div>
+    {{ end }} 
+    </div>
+  {{ end }}
     </div>
 </section>
 {{ end }}
